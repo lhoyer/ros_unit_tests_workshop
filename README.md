@@ -1,3 +1,3 @@
 # ROS-Unit-Tests Workshop
 
-* See doc/slides/ROSUnitTestsWorkshop.pdf
+* See doc/ROSUnitTestsWorkshop.pdf
