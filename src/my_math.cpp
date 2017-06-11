@@ -14,8 +14,8 @@ int MyMath::knobel(int x, int y) {
 
 int MyMath::nextSquare() {
 	int a=0, b=0, c=0;
-	mLastSquare++;
-	while (a <= mLastSquare) {
+	mLastBase++;
+	while (a <= mLastBase) {
 		a = a+1;
 		b = a+a-1;
 		c = b+c;

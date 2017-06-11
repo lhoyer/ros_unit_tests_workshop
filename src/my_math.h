@@ -6,6 +6,6 @@ public:
 	int knobel(int x, int y);
 
 protected:
-	int mLastSquare = 0;
+	int mLastBase = 0;
 	int nextSquare();
 };

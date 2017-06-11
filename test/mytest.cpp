@@ -5,26 +5,27 @@
 
 TEST(MyTest, knobelTest) {
     MyMath mymath;
-    EXPECT_EQ(1, mymath.knobel(7,13));
-    EXPECT_EQ(27, mymath.knobel(27,27));
-    EXPECT_EQ(6, mymath.knobel(12,18));
-    EXPECT_EQ(5, mymath.knobel(5,0));
-    EXPECT_THROW(mymath.knobel(12,-18), std::invalid_argument);
+    EXPECT_EQ(1, mymath.knobel(7,13)) << "gcd(7,13) = 1";
+    ASSERT_EQ(27, mymath.knobel(27,27)) << "gcd(27,27) = 27";
+    EXPECT_EQ(6, mymath.knobel(12,18)) << "gcd(12,18) = 6";
+    EXPECT_EQ(5, mymath.knobel(5,0)) << "gcd(5,0) = 5";
+    EXPECT_THROW(mymath.knobel(12,-18), std::invalid_argument) 
+        << "Our gcd isn't defined for negative values";
 }
 
 class MyMathTestSuite : public ::testing::Test, public MyMath {
 public:
     MyMathTestSuite() {
-    	mLastSquare = 5;
+    	mLastBase = 5;
     }
 };
 
 TEST_F(MyMathTestSuite, nextSquareTest) {
-	EXPECT_EQ(5, mLastSquare);
-	EXPECT_EQ(36, nextSquare());
-	EXPECT_EQ(6, mLastSquare);
-	EXPECT_EQ(49, nextSquare());
-	EXPECT_EQ(7, mLastSquare);
+	EXPECT_EQ(5, mLastBase);
+	EXPECT_EQ(36, nextSquare()) << "Square of 6 should be 36";
+	EXPECT_EQ(6, mLastBase);
+	EXPECT_EQ(49, nextSquare()) << "Square of 7 should be 49";
+	EXPECT_EQ(7, mLastBase);
 }
 
 int main(int argc, char** argv){
