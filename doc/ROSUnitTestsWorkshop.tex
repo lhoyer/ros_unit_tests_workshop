@@ -110,6 +110,7 @@ Trägheitsnavigationssystem (SRI) aus der Ariane 4
 \begin{frame}{Unittests}
 	\begin{block}{Vorteile von Unittests}
 	\begin{itemize}
+		\pause
 		\item keine \text{''}Wegwerftests\text{''}
 		\item Frühzeitiges Erkennen von Fehlern
 		\item Gute Eingrenzung von Fehlern
@@ -119,19 +120,6 @@ Trägheitsnavigationssystem (SRI) aus der Ariane 4
 		\item Schneller als andere Testarten
 		\item Design Hilfe
 		\item Durch zwingende Vermeidung von Abhängigkeiten bleibt Quellcode modularer
-	\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}{Unittests}
-	\begin{block}{Good Practices Unittests}
-	\begin{itemize}
-		\item Test Cases unabhängig voneinander
-		\item Jede Funktionalität in separatem Test Case
-		\item Ergebnisse testen, nicht Implementierung
-		\item Überspezifizierung vermeiden
-		\item Tests müssen deterministisch sein
-		\item Tests müssen schnell sein
 	\end{itemize}
 	\end{block}
 \end{frame}
@@ -158,6 +146,7 @@ catkin_create_pkg ros_unit_tests_workshop roscpp
 
 \begin{frame}[fragile]{Funktionalität}
 \begin{itemize}
+\item Quellcode unter: \url{https://github.com/lhoyer/ros_unit_tests_workshop/}
 \item Hinzufügen my\_math.h
 \begin{lstlisting}[language=c++]
 #pragma once
@@ -384,6 +373,19 @@ int MyMath::nextSquare() {
 	return c;
 }
 \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Unittests}
+	\begin{block}{Good Practices Unittests}
+	\begin{itemize}
+		\item Test Cases unabhängig voneinander
+		\item Jede Funktionalität in separatem Test Case
+		\item Ergebnisse testen, nicht Implementierung
+		\item Überspezifizierung vermeiden
+		\item Tests müssen deterministisch sein
+		\item Tests müssen schnell sein
+	\end{itemize}
+	\end{block}
 \end{frame}
 
 \end{document}
