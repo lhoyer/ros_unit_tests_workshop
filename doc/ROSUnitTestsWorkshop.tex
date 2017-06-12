@@ -42,6 +42,23 @@
 \begin{document}
 \maketitle
 
+\begin{frame}{Softwareentwicklung}
+	\begin{block}{Spezifikation}
+		= Beschreibung des geforderten Systems
+		\begin{itemize}
+			\item Was soll von einem System geleistet werden?
+			\item Was sind die funktionalen und nicht-funktionalen Anforderungen?
+		\end{itemize}
+	\end{block}
+	\begin{block}{Verifikation}
+		= entspricht Software der Spezifikation	
+		\begin{itemize}
+			\item Arbeitet das Programm korrekt?
+			\item Erfüllt das Programm die Anforderungen?
+		\end{itemize}
+	\end{block}
+\end{frame}
+
 \begin{frame}{Motivation: Ariane 5}
 \begin{itemize}
 	\item Übernahme von Hard- und Software für das
@@ -67,23 +84,6 @@ Trägheitsnavigationssystem (SRI) aus der Ariane 4
 	\includegraphics[width=\textwidth]{img/ariane5.jpg}
 
 	\url{https://www.youtube.com/watch?v=A1gGGDG580E}
-\end{frame}
-
-\begin{frame}{Softwareentwicklung}
-	\begin{block}{Spezifikation}
-		= Beschreibung des geforderten Systems
-		\begin{itemize}
-			\item Was soll von einem System geleistet werden?
-			\item Was sind die funktionalen und nicht-funktionalen Anforderungen?
-		\end{itemize}
-	\end{block}
-	\begin{block}{Verifikation}
-		= entspricht Software der Spezifikation	
-		\begin{itemize}
-			\item Arbeitet das Programm korrekt?
-			\item Erfüllt das Programm die Anforderungen?
-		\end{itemize}
-	\end{block}
 \end{frame}
 
 \begin{frame}{Softwaretests}
@@ -186,6 +186,7 @@ int MyMath::nextSquare() {
 		b = a+a-1;
 		c = b+c;
 	}
+	return c;
 }
 \end{lstlisting}
 \end{itemize}
@@ -231,6 +232,7 @@ endif()
 \end{frame}
 
 \begin{frame}[fragile]{GTest Frame}
+test/mytest.cpp:
 \begin{lstlisting}[language=c++]
 #include <ros/ros.h>
 #include <gtest/gtest.h>
